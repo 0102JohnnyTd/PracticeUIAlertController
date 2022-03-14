@@ -29,5 +29,12 @@ extension ViewController: UITableViewDelegate,UITableViewDataSource {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         150
     }
-}
 
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let alertController = UIAlertController(title: "UIAlertController起動", message: "セルをタップしたので \n UIAlertControllerが起動しました", preferredStyle: .alert)
+
+        alertController.addAction(UIAlertAction(title: "あぁ、そうですか。はいはい。", style: .default, handler: nil))
+
+        self.present(alertController, animated: true, completion: nil)
+    }
+}
